@@ -1,0 +1,9 @@
+---
+- name: Copying create_hostgroups file to server
+  template: >
+    src=create_hostgroups.j2
+    dest=/root/create_hostgroups.sh
+    owner=root
+    group=root
+    mode=0644
+  tags: icinga2

@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+echo "creating {{ host }}"
+
+curl -s -u $ICINGA2_API_USER:$ICINGA2_API_PASSWORD  \
+     -H 'Accept: application/json' -X PUT \
+     -k "https://$ICINGA2_HOST:$ICINGA2_API_PORT/v1/objects/hosts/{{ host }}" \
+     -d '{ "templates": [ "generic-host" ], "attrs": { "address": "{{ ip_address }}", "vars.hostgroups": "{{ hostgroups }}", "groups": ["{{ hostgroups }}"], "vars.notification[\"mail\"]": { "groups": ["{{ usergroups }}"] } } }' | python -m json.tool

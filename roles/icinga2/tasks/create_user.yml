@@ -1,0 +1,9 @@
+- name: Copying create_user file to server
+  template: >
+    src=create_user.j2
+    dest=/root/create_user.sh
+
+    owner=root
+    group=root
+    mode=0644
+  tags: icinga2

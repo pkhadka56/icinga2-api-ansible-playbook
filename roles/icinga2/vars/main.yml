@@ -1,0 +1,8 @@
+---
+# Setting users
+create_user:
+  - user: "User1"
+    email: "my@email.com"
+
+  - user: "User2"
+    email: "your@email.com"

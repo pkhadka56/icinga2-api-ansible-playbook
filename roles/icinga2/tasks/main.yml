@@ -1,0 +1,12 @@
+---
+- name: Creating hostgroups
+  include: create_hostgroups.yml
+
+- name: Creating host
+  include: create_host.yml
+
+- name: Creating uergroups
+  include: create_usergroups.yml
+
+- name: Creating User
+  include: create_user.yml

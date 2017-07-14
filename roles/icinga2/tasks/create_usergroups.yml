@@ -1,0 +1,9 @@
+---
+- name: Copying create_usergroups file to server
+  template: >
+    src=create_usergroups.j2
+    dest=/root/create_usergroups.sh
+    owner=root
+    group=root
+    mode=0644
+  tags: icinga2

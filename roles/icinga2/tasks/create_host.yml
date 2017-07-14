@@ -1,0 +1,9 @@
+---
+- name: Copying create_host file to server
+  template: >
+    src=create_host.j2
+    dest=/root/create_host.sh
+    owner=root
+    group=root
+    mode=0644
+  tags: icinga2

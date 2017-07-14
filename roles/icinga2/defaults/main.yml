@@ -1,0 +1,7 @@
+---
+hostgroups: "test_host_group"
+display_hostgroup: "Test host group"
+host: "{{ inventory_hostname }}" 
+ip_address: "{{ ansible_default_ipv4.address }}"
+usergroups: test_user_group
+display_usergroup: "Test user group"
